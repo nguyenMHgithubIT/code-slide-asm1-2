@@ -111,7 +111,10 @@ class ArrayStack {
         stack.displayStack();
 
         // Bubble Sort
+        Student[] quickArray = stack.toArray();
         Student[] bubbleArray = stack.toArray();
+
+        
         long bubbleStartTime = System.nanoTime();
         bubbleSort(bubbleArray);
         long bubbleEndTime = System.nanoTime();
@@ -122,7 +125,7 @@ class ArrayStack {
 
         // Quick Sort
         stack.updateFromArray(stack.toArray()); // Reset stack to original
-        Student[] quickArray = stack.toArray();
+        
         long quickStartTime = System.nanoTime();
         quickSort(quickArray, 0, quickArray.length - 1);
         long quickEndTime = System.nanoTime();
